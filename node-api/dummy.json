@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "csl": {
+        "type": "webpage",
+        "title": "Setup | Node.js API From Scratch Using TypeScript, Express And MongoDB #1",
+        "title-short": "YouTube",
+        "publisher": "YouTube",
+        "publisher-place": "",
+        "issued": { "date-parts": [["2021", "11", "17"]] },
+        "accessed": { "date-parts": [["2022", "02", "02"]] },
+        "container-title": "YouTube",
+        "author": [],
+        "URL": "https://www.youtube.com/watch?v=1o9YOHeKhNQ"
+      },
+      "metrics": {
+        "rule": "YoutubeCom",
+        "ruleVersion": "1.0.0",
+        "processTime": 0.5175130367279053,
+        "extractTime": 0.03876304626464844,
+        "cacheRead": false,
+        "url": "https://www.youtube.com/watch?v=1o9YOHeKhNQ",
+        "host": "www.youtube.com",
+        "score": 80,
+        "created": "2022/02/02 15:40:58",
+        "ner": 3,
+        "institutionFound": 100,
+        "institutionNotExpected": 0,
+        "institutionMissing": 0,
+        "institution": 1,
+        "mediumTitleFound": 100,
+        "mediumTitleNotExpected": 0,
+        "mediumTitleMissing": 0,
+        "mediumTitle": 1,
+        "contentTitleFound": 100,
+        "contentTitleNotExpected": 0,
+        "contentTitleMissing": 0,
+        "contentTitle": 1,
+        "contributorsFound": 0,
+        "contributorsNotExpected": 0,
+        "contributorsMissing": 100,
+        "contributors": 2,
+        "publishedDayFound": 100,
+        "publishedDayNotExpected": 0,
+        "publishedDayMissing": 0,
+        "publishedDay": 1,
+        "publishedMonthFound": 100,
+        "publishedMonthNotExpected": 0,
+        "publishedMonthMissing": 0,
+        "publishedMonth": 1,
+        "publishedYearFound": 100,
+        "publishedYearNotExpected": 0,
+        "publishedYearMissing": 0,
+        "publishedYear": 1,
+        "requestedUrl": "https://www.youtube.com/watch?v=1o9YOHeKhNQ"
+      },
+      "feedback": {
+        "rule": "YoutubeCom",
+        "ruleVersion": "1.0.0",
+        "url": "https://www.youtube.com/watch?v=1o9YOHeKhNQ",
+        "host": "www.youtube.com",
+        "_institution": "YouTube",
+        "_mediumTitle": "YouTube",
+        "_contentTitle": "Setup | Node.js API From Scratch Using TypeScript, Express And MongoDB #1",
+        "_contributors": { "author": [] },
+        "_publishedDay": "17",
+        "_publishedMonth": "11",
+        "_publishedYear": "2021"
+      },
+      "notifications": null
+    }
+  ]
+}
+
+

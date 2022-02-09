@@ -1,0 +1,97 @@
+{
+  "Rules": [
+    {
+      "AmazonCom": {
+        "pageDate": {
+          "INSTITUTION": "Amazon",
+          "MEDIUM_TITLE": "Amazon",
+          "CONTENT_TITLE": "true",
+          "CONTRIBUTORS": "true",
+          "PUBLISHED_DAY": "true",
+          "PUBLISHED_MONTH": "true",
+          "PUBLISHED_YEAR": "true"
+        },
+        "api": "AmazonBook",
+        "parsers": ["OpenApi","OGParser"],
+        "scrapper": {
+          "title": "#productTitle",
+          "contributors": "#booksTitle span.author a.contributorNameID",
+          "publishedDate": "#title",
+          "publishedDateFromString": {
+            "fn": "charsAfter",
+            "args": {
+              "0": "publishedDate",
+              "1": "-"
+            }
+          }
+        }
+      }
+    },
+    {
+      "AbcnewGoCom": {
+        "pageDate": {
+          "INSTITUTION": "ABC News Network",
+          "MEDIUM_TITLE": "ABC News",
+          "CONTENT_TITLE": "true",
+          "CONTRIBUTORS": "true",
+          "PUBLISHED_DAY": "true",
+          "PUBLISHED_MONTH": "true",
+          "PUBLISHED_YEAR": "true"
+        },
+        "api": "",
+        "parsers": "[OpenApi,OGParser]",
+        "scrapper": {
+          "title": {
+            "fn": "getTexts",
+            "args": [
+              "h1.headline: null",
+              "h1.pagetitle:null,",
+              "header.article-header h1:null"
+            ]
+          },
+          "contributors": {
+            "fn": "getAllTexts",
+            "args": [
+              "ul.authors div.author-new: null",
+              "ul.authors div[rel='author']",
+              "div.byline a[rel='author']"
+            ]
+          },
+          "publishedDate": {
+            "fn": "getTexts",
+            "args": [
+              "div.byline_date > div.date:null",
+              "//div[contains(@class,'post-entry')]//div[contains(@class,'date')]/text()",
+              "div.article-meta span.timestamp"
+            ]
+          },
+          "publishedDateFromString": {
+            "fn": "extractString",
+            "args": {
+              "0": "",
+              "1": ""
+            }
+          }
+        }
+      }
+    }
+  ],
+  "Parser": {
+    "OpenApi": {},
+    "OGParser": {}
+  },
+  "API": {
+    "AmazonBook": {
+      "pageDate": {
+        "INSTITUTION": "Amazon",
+        "MEDIUM_TITLE": "Amazon",
+        "CONTENT_TITLE": "true",
+        "CONTRIBUTORS": "true",
+        "PUBLISHED_DAY": "true",
+        "PUBLISHED_MONTH": "true",
+        "PUBLISHED_YEAR": "true"
+      },
+      "apiUrl": "https://worldcat.citation-api.com/query?search=%s&srctype=book"
+    }
+  }
+}
